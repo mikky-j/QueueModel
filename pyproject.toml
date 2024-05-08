@@ -1,0 +1,29 @@
+[project]
+name = "queuemodel"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Oregunwa Oluwadamilola Michael", email = "moregunwa@gmail.com" }
+]
+dependencies = [
+    "rich>=13.7.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/queuemodel"]
+
+[project.scripts]
+main = "queuemodel:main"
