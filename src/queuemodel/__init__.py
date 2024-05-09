@@ -31,13 +31,17 @@ def main():
             print("The waiting time of the system", queue.waiting_time_of_system())
 
             no_person_in_queue = queue.probability_that_no_queue()
-            people_in_system = int(input("\nHow many people are in the system: "))
+            people_in_system = int(
+                input("\nHow many people do you want to find the probability of: ")
+            )
 
             if queue.queue_length is not None:  # If the queue is finite
-                while queue.queue_length > people_in_system:
+                while people_in_system > queue.queue_length:
                     print("Too large to be in system")
                     people_in_system = int(
-                        input("\nHow many people are in the system: ")
+                        input(
+                            "\nHow many people do you want to find the probability of: "
+                        )
                     )
 
             prob_people_in_system = queue.probability_of_no_of_people_in_system(
@@ -63,7 +67,7 @@ def main():
                 f"The probablity of at most {people_in_system} in the system is {at_most_people_in_system}"
             )
             if queue.queue_length is not None:  # If the queue is finite
-                doesnt_join = queue.probability_of_no_of_people_in_system(10)
+                doesnt_join = queue.probability_of_no_of_people_in_system(queue_length)
                 join = round(1 - doesnt_join, 4)
                 print(
                     f"The probablity of a person that comes doesn't the queue is {doesnt_join}"
