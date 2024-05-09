@@ -75,7 +75,7 @@ class Queue:
         if self.queue_length is None:  # If the queue is infinite
             answer = self.length_of_the_queue() / self.arrival_rate
         else:
-            answer = self.length_of_the_queue() / self.effective_arrival_rate()
+            answer = self.waiting_time_of_system() - (1 / self.service_rate)
 
         return round(answer, 4)
 
