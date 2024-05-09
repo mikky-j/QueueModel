@@ -1,6 +1,10 @@
 # queuemodel
 
-This is a calculator that calculates the `len_of_system`, `len_of_queue`, `wait_of_system`, and `wait_of_queue` for a hyptothetical queue. It uses the formulas that were learnt in class to get all the values.
+This models a finite and infinite queue and calculates the all associated values discussed in class
+
+## Where to start
+- Go to the `src/queuemodel`
+- Look at the `__init__.py` to look at the interface code and `queue.py` to look at the `Queue` class used
 
 ## How to Run
 
