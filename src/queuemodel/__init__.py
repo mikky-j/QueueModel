@@ -24,8 +24,11 @@ def main():
                 service_rate,
                 queue_length=queue_length if queue_length > 0 else None,
             )
+            print()
 
-            print("The length of the queue", queue.length_of_the_queue())
+            if queue.queue_length is None:  # for Inifinite
+                print("The length of the queue", queue.length_of_the_queue())
+
             print("The length of the system", queue.length_of_the_system())
             print("The waiting time of the queue", queue.waiting_time_of_queue())
             print("The waiting time of the system", queue.waiting_time_of_system())
